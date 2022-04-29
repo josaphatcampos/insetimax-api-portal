@@ -28,12 +28,12 @@ Route::get('produto', 'App\Http\Controllers\ProdutosController@produto');//->mid
 Route::get('categorias', 'App\Http\Controllers\ProdutosController@categorias');//->middleware('cors');
 
 Route::get('blog', 'App\Http\Controllers\BlogsController@index');//->middleware('cors');
-Route::get('noticia', 'App\Http\Controllers\BlogsController@noticia');
-Route::get('noticias-recentes', 'App\Http\Controllers\BlogsController@recentes');
+Route::get('noticia', 'App\Http\Controllers\BlogsController@noticia');//->middleware('cors');;
+Route::get('noticias-recentes', 'App\Http\Controllers\BlogsController@recentes');//->middleware('cors');;
 
-Route::get('site', 'App\Http\Controllers\SitesController@index');
-Route::get('banner', 'App\Http\Controllers\BannerController@index');
-Route::get('trabalhe-conosco', 'App\Http\Controllers\ContatosController@trabalheconosco');
+Route::get('site', 'App\Http\Controllers\SitesController@index');//->middleware('cors');;
+Route::get('banner', 'App\Http\Controllers\BannerController@index');//->middleware('cors');;
+Route::get('trabalhe-conosco', 'App\Http\Controllers\ContatosController@trabalheconosco');//->middleware('cors');;
 
 Route::get('representantes', 'App\Http\Controllers\RepresentantesController@index');//->middleware('cors');
 Route::get('representantes-estado', 'App\Http\Controllers\RepresentantesController@estado');//->middleware('cors');

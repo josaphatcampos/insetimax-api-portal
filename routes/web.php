@@ -23,9 +23,9 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-//Route::get('/criarlink', function () {
-//    $target = '/home2/jocampos/public_html/mariobodnar/storage/app/public';
-//    $atalho = '/home2/jocampos/public_html/mariobodnar/public/storage';
-//    symlink ($target, $atalho);
-//    return "funciona";
-//});
+Route::get('/criarlink', function () {
+    $target = '/home2/jocampos/public_html/insetimax/storage/app/public';
+    $atalho = '/home2/jocampos/public_html/insetimax/public/storage';
+    symlink ($target, $atalho);
+    return "funciona";
+});
