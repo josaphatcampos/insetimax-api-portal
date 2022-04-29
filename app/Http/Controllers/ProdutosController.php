@@ -38,9 +38,11 @@ class ProdutosController extends Controller
         $site = $request->get('site');
         $categoria = $request->get('categoria');
 
-        $produtos = Produto::whereHas('categoria', function($q) use ($categoria) {
-            $q->where('id', '=', $categoria);
-        })->get();
+        $produtos = Produto::whereHas('site', function($q) use ($site) {
+            $q->where('slug', '=', $site);
+        })
+            ->where('categoria_id', $categoria)
+            ->get();
 
         return response()->json($produtos, 200);;
     }
@@ -52,6 +54,22 @@ class ProdutosController extends Controller
         ->whereHas('site', function($q) use ($site) {
             $q->where('slug', '=', $site);
         })->limit(4)->get();
+
+        return response()->json($produtos, 200);;
+    }
+
+    public function maisprocuradosportal(Request $request){
+        $site = $request->get('site');
+
+        $produtos = Produto::where('procurado', 1)
+//            ->whereHas('site', function($q) use ($site) {
+//                $q->where('slug', '=', $site);
+//            })
+                ->with('site')
+            ->inRandomOrder()
+            ->limit(4)->get();
+
+
 
         return response()->json($produtos, 200);;
     }

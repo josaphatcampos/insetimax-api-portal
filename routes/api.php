@@ -22,6 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('produtos', 'App\Http\Controllers\ProdutosController@index');//->middleware('cors');
 Route::get('produto-categoria', 'App\Http\Controllers\ProdutosController@produtocategoria');//->middleware('cors');
 Route::get('produto-procurados', 'App\Http\Controllers\ProdutosController@maisprocurados');//->middleware('cors');
+Route::get('produto-procurados-portal', 'App\Http\Controllers\ProdutosController@maisprocuradosportal');//->middleware('cors');
 Route::get('produto-lancamento', 'App\Http\Controllers\ProdutosController@lancamento');//->middleware('cors');
 Route::get('produto', 'App\Http\Controllers\ProdutosController@produto');//->middleware('cors');
 Route::get('categorias', 'App\Http\Controllers\ProdutosController@categorias');//->middleware('cors');
@@ -32,6 +33,7 @@ Route::get('noticias-recentes', 'App\Http\Controllers\BlogsController@recentes')
 
 Route::get('site', 'App\Http\Controllers\SitesController@index');
 Route::get('banner', 'App\Http\Controllers\BannerController@index');
+Route::get('trabalhe-conosco', 'App\Http\Controllers\ContatosController@trabalheconosco');
 
 Route::get('representantes', 'App\Http\Controllers\RepresentantesController@index');//->middleware('cors');
 Route::get('representantes-estado', 'App\Http\Controllers\RepresentantesController@estado');//->middleware('cors');
