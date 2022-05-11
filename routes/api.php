@@ -31,7 +31,7 @@ Route::get('blog', 'App\Http\Controllers\BlogsController@index');//->middleware(
 Route::get('noticia', 'App\Http\Controllers\BlogsController@noticia');//->middleware('cors');;
 Route::get('noticias-recentes', 'App\Http\Controllers\BlogsController@recentes');//->middleware('cors');;
 
-Route::get('site', 'App\Http\Controllers\SitesController@index');//->middleware('cors');;
+Route::get('site', 'App\Http\Controllers\SitesController@index');//->middleware('cors');
 Route::get('banner', 'App\Http\Controllers\BannerController@index');//->middleware('cors');;
 Route::get('trabalhe-conosco', 'App\Http\Controllers\ContatosController@trabalheconosco');//->middleware('cors');;
 
