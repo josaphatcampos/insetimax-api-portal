@@ -33,7 +33,8 @@ Route::get('noticias-recentes', 'App\Http\Controllers\BlogsController@recentes')
 
 Route::get('site', 'App\Http\Controllers\SitesController@index');//->middleware('cors');
 Route::get('banner', 'App\Http\Controllers\BannerController@index');//->middleware('cors');;
-Route::get('trabalhe-conosco', 'App\Http\Controllers\ContatosController@trabalheconosco');//->middleware('cors');;
+Route::post('trabalhe-conosco', 'App\Http\Controllers\ContatosController@trabalheconosco');//->middleware('cors');;
+Route::post('contato', 'App\Http\Controllers\ContatosController@contato');//->middleware('cors');;
 
 Route::get('representantes', 'App\Http\Controllers\RepresentantesController@index');//->middleware('cors');
 Route::get('representantes-estado', 'App\Http\Controllers\RepresentantesController@estado');//->middleware('cors');

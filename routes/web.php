@@ -17,6 +17,10 @@ Route::get('/', function () {
     return redirect('/admin');
 });
 
+Route::get('infophp', function () {
+    phpinfo();
+})->name('phpmyinfo');
+
 Route::group(['prefix' => 'admin'], function () {
 //    Route::get('/test-results/update-read/{id}/{read}', 'App\\Http\\Controllers\\TestResultController@updateRead')->name('testResult.update.read');
 //    Route::get('/test-results/get-result/{id}', 'App\\Http\\Controllers\\TestResultController@getResult')->name('testResult.get.result');
